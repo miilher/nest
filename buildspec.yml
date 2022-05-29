@@ -13,3 +13,6 @@ phases:
   post_build:
     command:
       - npm run start:prod
+artifacts:
+  files:
+    - '**/*'
