@@ -22,7 +22,7 @@ export class Form1Controller {
 
   @Get(':id')
   findOne(@Param('id') id: number) {
-    return this.form1Service.findOne(id);
+    return this.form1Service.findOne(+id);
   }
 
   @Patch(':id')
