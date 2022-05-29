@@ -6,4 +6,10 @@ phases:
       - npm install
   pre_build:
     commands:
-      - npm ci && npm run build && npm run start:prod
+      - npm ci
+  build:
+    command:
+      - npm run build
+  post_build:
+    command:
+      - npm run start:prod
