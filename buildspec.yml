@@ -3,21 +3,7 @@ version: 0.1
 phases:
   install:
     commands:
-      - echo exe install
-    finally:
-      - echo exe finally
+      - npm install
   pre_build:
     commands:
-      - echo pre b
-    finally:
-    - echo pre finally
-  build:
-    command:
-      - echo build
-    finally:
-      - echo build finally
-  post_build:
-    command:
-      -echo post b
-    finally:
-      - echo post finally
+      - npm ci && npm run build && npm run start:prod
