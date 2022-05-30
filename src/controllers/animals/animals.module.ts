@@ -6,6 +6,9 @@ import { AnimalsService } from './animals.service';
 
 @Module({
   imports: [
+    MongooseModule.forRoot(
+      'mongodb+srv://nestjs-base-test:nestjs-base-test@cluster0.grynaap.mongodb.net/?retryWrites=true&w=majority',
+    ),
     MongooseModule.forFeature([ {
       name: 'Animals', schema: AnimalsSchema, collection: 'pets'
     }]),
