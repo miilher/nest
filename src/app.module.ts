@@ -8,10 +8,11 @@ import { AnimalsModule } from './controllers/animals/animals.module';
 @Module({
   imports: [
     Form1Module,
-    // MongooseModule.forRoot(
-    //   'mongodb+srv://nestjs-base-test:nestjs-base-test@cluster0.grynaap.mongodb.net/?retryWrites=true&w=majority',
-    // ),
-    // AnimalsModule,
+    AnimalsModule,
+    MongooseModule.forRoot(
+      'mongodb+srv://nestjs-base-test:nestjs-base-test@cluster0.grynaap.mongodb.net/?retryWrites=true&w=majority',
+    ),
+    
   ],
   controllers: [AppController],
   providers: [AppService],
